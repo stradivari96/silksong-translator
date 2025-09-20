@@ -31,6 +31,13 @@ if __name__ == "__main__":
             if not i.text:
                 continue
             text = i.text.replace("<br>", "\n")
+            text = text.replace("<hpage>", "\n\n")
+            text = text.replace("<page=S>", "\n\n")
+            text = text.replace("<page=M>", "\n\n")
+            text = text.replace("<page=B>", "\n\n")
+            text = text.replace("<page=T>", "\n\n")
+            text = text.replace("<page=L>", "\n\n")
+            text = text.replace("<page=C>", "\n\n")
             text = text.replace("<page>", "\n\n")
             text = text.replace("<Page>", "\n\n").strip()
             if text:
