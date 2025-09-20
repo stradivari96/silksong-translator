@@ -25,9 +25,9 @@ const Layout = ({ children }: LayoutProps) => (
           meta={[
             {
               name: "description",
-              content: "Searches for hollow knight text assets",
+              content: "Searches for hollow knight silksong text assets",
             },
-            { name: "keywords", content: "hollow knight, game" },
+            { name: "keywords", content: "hollow knight, silksong, game" },
           ]}
         >
           <html lang="en" />
