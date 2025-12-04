@@ -11,6 +11,11 @@ npm start
 
 ## Exporting assets
 
+```
+Remove-Item -Path ".\TextAsset\*.txt"
+Remove-Item -Path ".\DecodedText\*.txt"
+```
+
 Export all `TextAsset` using https://github.com/aelurum/AssetStudio. And run the decrypt https://www.nexusmods.com/hollowknightsilksong/mods/10?tab=files:
 
 ```
@@ -20,3 +25,5 @@ Export all `TextAsset` using https://github.com/aelurum/AssetStudio. And run the
 ```
 python generate_json.py
 ```
+
+Check build info at https://steamdb.info/app/1030300/patchnotes/

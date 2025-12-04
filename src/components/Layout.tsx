@@ -71,7 +71,7 @@ const Layout = ({ children }: LayoutProps) => (
             <a className="font-normal mx-1" href="https://www.xiang.dev/about">
               Xiang Chen
             </a>
-            | {new Date().getFullYear()}
+            | Build 20764176 Patch 1.0.29242
           </p>
         </footer>
       </div>
