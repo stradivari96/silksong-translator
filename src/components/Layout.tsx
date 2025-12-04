@@ -58,7 +58,7 @@ const Layout = ({ children }: LayoutProps) => (
           <p className="m-auto font-light">
             <a
               className="inline-block align-middle"
-              href="https://github.com/stradivari96/hollow-knight-translator"
+              href="https://github.com/stradivari96/silksong-translator"
             >
               <svg className="h-4 mx-1 mb-1" viewBox="0 0 496 512">
                 <path
