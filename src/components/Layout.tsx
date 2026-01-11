@@ -71,7 +71,7 @@ const Layout = ({ children }: LayoutProps) => (
             <a className="font-normal mx-1" href="https://www.xiang.dev/about">
               Xiang Chen
             </a>
-            | Build 20764176 Patch 1.0.29242
+            | Build 20764176 Patch 1.0.29315
           </p>
         </footer>
       </div>
