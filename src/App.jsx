@@ -22,25 +22,26 @@ const App = () => {
   );
   const [results, setResults] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-
+  
+  // URL param parsing
   useEffect(() => {
     const params = queryString.parse(window.location.search);
-    const inputText = params.search;
+    const initialInput = params.search;
     const lang = params.lang;
 
-    const selectedLanguages = new Set();
+    const initialLangs = new Set();
     if (lang)
       lang
         .split(",")
         .filter((x) => x.length > 0)
-        .forEach((x) => selectedLanguages.add(x));
-    if (inputText) {
-      setInputText(inputText);
-      setSelectedLanguages(selectedLanguages);
+        .forEach((x) => initialLangs.add(x));
+    if (initialInput) {
+      setInputText(initialInput);
+      setSelectedLanguages(initialLangs);
     }
   }, []);
 
-  // Get text ids
+  // Filter variables (Debounced for performance)
   useEffect(() => {
     if (inputText === "") {
       setVariables([]);
@@ -51,21 +52,21 @@ const App = () => {
     setIsLoading(true);
     const delayDebounceFn = setTimeout(() => {
       const searchStr = normalize(inputText);
-      const variables = [];
+      const foundVariables = [];
       Object.entries(AllText).forEach(([lang, data]) => {
         Object.entries(data).forEach(([k, v]) => {
-          if (variables.includes(k)) return;
+          if (foundVariables.includes(k)) return;
           if (!v) return;
           if (
             normalize(v).includes(searchStr) ||
             normalize(k).includes(searchStr)
           ) {
-            variables.push(k);
+            foundVariables.push(k);
           }
         });
       });
-      variables.sort();
-      setVariables(variables);
+      foundVariables.sort();
+      setVariables(foundVariables);
       setIsLoading(false);
     }, 500);
 
@@ -154,6 +155,7 @@ const App = () => {
             </div>
           )}
         </div>
+        
         {isLoading ? (
           <div className="flex justify-center items-center py-10">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900"></div>
