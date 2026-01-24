@@ -122,7 +122,7 @@ const App = () => {
         <div className="px-2">
           {variables.length > 5 ? (
             <select
-              className="block w-full border text-gray-700 py-2 my-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:shadow-outline"
+              className="block w-full border border-gray-300 bg-white text-gray-700 py-2 my-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:shadow-outline"
               value={selectedVariable}
               required
               onChange={(event) => {

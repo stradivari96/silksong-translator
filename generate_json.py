@@ -42,5 +42,5 @@ if __name__ == "__main__":
             text = text.replace("<Page>", "\n\n").strip()
             if text:
                 result[lang][i.get("name")] = text
-    with open("src/pages/all_text.json", "w", encoding="UTF-8") as f:
+    with open("src/all_text.json", "w", encoding="UTF-8") as f:
         json.dump(result, f, ensure_ascii=False, indent=2)
