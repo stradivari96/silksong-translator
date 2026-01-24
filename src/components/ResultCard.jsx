@@ -7,7 +7,28 @@ const normalize = (str) => {
 
 const getHighlightedText = (text, highlight) => {
   if (!highlight) return text;
-  const normText = normalize(text);
+
+  // 1. Build normalized text and mapping
+  let normText = "";
+  const mapping = []; // index in normText -> index in text
+
+  let i = 0;
+  while (i < text.length) {
+    const codePoint = text.codePointAt(i);
+    const char = String.fromCodePoint(codePoint);
+    const charLen = char.length; // 1 or 2
+
+    const normChar = normalize(char);
+
+    for (let k = 0; k < normChar.length; k++) {
+      mapping.push(i);
+    }
+
+    normText += normChar;
+    i += charLen;
+  }
+  mapping.push(text.length); // End sentinel
+
   const normHighlight = normalize(highlight);
   if (!normHighlight) return text;
 
@@ -18,23 +39,37 @@ const getHighlightedText = (text, highlight) => {
   while (matchIndex !== -1) {
     // text before match
     if (matchIndex > currentIndex) {
-      parts.push(text.slice(currentIndex, matchIndex));
+      const start = mapping[currentIndex];
+      const end = mapping[matchIndex];
+      if (end > start) {
+        parts.push(text.slice(start, end));
+      }
     }
 
     // matched text
-    parts.push(
-      <span key={matchIndex} className="bg-yellow-200 text-black">
-        {text.slice(matchIndex, matchIndex + normHighlight.length)}
-      </span>
-    );
+    const matchStart = mapping[matchIndex];
+    const matchEndNorm = matchIndex + normHighlight.length;
+    const matchEnd = mapping[matchEndNorm] !== undefined ? mapping[matchEndNorm] : text.length;
+
+    if (matchEnd > matchStart) {
+      parts.push(
+        <span key={matchStart} className="bg-yellow-200 text-black">
+          {text.slice(matchStart, matchEnd)}
+        </span>
+      );
+    }
 
     currentIndex = matchIndex + normHighlight.length;
     matchIndex = normText.indexOf(normHighlight, currentIndex);
   }
 
   // remaining text
-  if (currentIndex < text.length) {
-    parts.push(text.slice(currentIndex));
+  if (currentIndex < normText.length) {
+    const start = mapping[currentIndex];
+    const end = mapping[normText.length];
+    if (end > start) {
+      parts.push(text.slice(start, end));
+    }
   }
 
   return parts.length > 0 ? parts : text;
