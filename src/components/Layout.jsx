@@ -1,17 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Helmet } from "react-helmet-async";
 
 const Layout = ({ children }) => {
   const title = "Silksong translator";
   return (
     <div className="bg-gray-200 h-full min-h-screen flex flex-col">
-      <Helmet>
-        <title>{title}</title>
-        <meta name="description" content="Searches for hollow knight silksong text assets" />
-        <meta name="keywords" content="hollow knight, silksong, game" />
-        <html lang="en" />
-      </Helmet>
       <div
         className="max-w-screen-lg w-9/12 flex-grow"
         style={{
