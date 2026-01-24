@@ -21,6 +21,7 @@ const App = () => {
     new Set()
   );
   const [results, setResults] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const params = queryString.parse(window.location.search);
@@ -43,8 +44,13 @@ const App = () => {
   useEffect(() => {
     if (inputText === "") {
       setVariables([]);
-    } else {
-      const searchStr = normalize(inputText)
+      setIsLoading(false);
+      return;
+    }
+
+    setIsLoading(true);
+    const delayDebounceFn = setTimeout(() => {
+      const searchStr = normalize(inputText);
       const variables = [];
       Object.entries(AllText).forEach(([lang, data]) => {
         Object.entries(data).forEach(([k, v]) => {
@@ -60,7 +66,10 @@ const App = () => {
       });
       variables.sort();
       setVariables(variables);
-    }
+      setIsLoading(false);
+    }, 500);
+
+    return () => clearTimeout(delayDebounceFn);
   }, [selectedLanguages, inputText]);
 
   // Get results
@@ -84,6 +93,7 @@ const App = () => {
   }, [variables, selectedLanguages, selectedVariable]);
 
   const onSelect = (value) => {
+    setIsLoading(true);
     if (value === "All") selectedLanguages.clear();
     else {
       if (selectedLanguages.has(value)) {
@@ -100,7 +110,11 @@ const App = () => {
       <div>
         <Form
           inputText={inputText}
-          setInputText={setInputText}
+          setInputText={(val) => {
+            setInputText(val);
+            if (val === "") setIsLoading(false);
+            else setIsLoading(true);
+          }}
           selectedLanguages={Array.from(selectedLanguages).sort()}
         />
         <Flags onSelect={onSelect} selectedLanguages={selectedLanguages} />
@@ -120,7 +134,13 @@ const App = () => {
             ))}
           </select>
         </div>
-        <TextResults values={results} />
+        {isLoading ? (
+          <div className="flex justify-center items-center py-10">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900"></div>
+          </div>
+        ) : (
+          <TextResults values={results} />
+        )}
       </div>
     </Layout>
   );
