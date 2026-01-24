@@ -1,41 +1,40 @@
 import React, { useState, useEffect } from "react";
-import { PageProps } from "gatsby";
 import queryString from "query-string";
 
-import Layout from "../components/Layout";
-import TextResults from "../components/TextResults";
-import Flags from "../components/Flags";
-import Form from "../components/Form";
+import Layout from "./components/Layout";
+import TextResults from "./components/TextResults";
+import Flags from "./components/Flags";
+import Form from "./components/Form";
 
 import AllText from "./all_text.json";
 
-const normalize = (str: string) => {
+const normalize = (str) => {
   str = str.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
   return str.toLowerCase()
 }
 
-const IndexPage = ({ location }: PageProps) => {
+const App = () => {
   const [inputText, setInputText] = useState("");
   const [selectedVariable, setSelectedVariable] = useState("");
-  const [variables, setVariables] = useState<Array<string>>([]);
-  const [selectedLanguages, setSelectedLanguages] = useState<Set<string>>(
+  const [variables, setVariables] = useState([]);
+  const [selectedLanguages, setSelectedLanguages] = useState(
     new Set()
   );
-  const [results, setResults] = useState<Array<[string, string]>>([]);
+  const [results, setResults] = useState([]);
 
   useEffect(() => {
-    const params = queryString.parse(location.search);
+    const params = queryString.parse(window.location.search);
     const inputText = params.search;
     const lang = params.lang;
 
-    const selectedLanguages: Set<string> = new Set();
+    const selectedLanguages = new Set();
     if (lang)
-      (lang as string)
+      lang
         .split(",")
         .filter((x) => x.length > 0)
         .forEach((x) => selectedLanguages.add(x));
     if (inputText) {
-      setInputText(inputText as string);
+      setInputText(inputText);
       setSelectedLanguages(selectedLanguages);
     }
   }, []);
@@ -46,9 +45,9 @@ const IndexPage = ({ location }: PageProps) => {
       setVariables([]);
     } else {
       const searchStr = normalize(inputText)
-      const variables: Array<string> = [];
-      Object.entries(AllText).forEach(([lang, data]: [string, object]) => {
-        Object.entries(data).forEach(([k, v]: [string, string]) => {
+      const variables = [];
+      Object.entries(AllText).forEach(([lang, data]) => {
+        Object.entries(data).forEach(([k, v]) => {
           if (variables.includes(k)) return;
           if (!v) return;
           if (
@@ -62,13 +61,13 @@ const IndexPage = ({ location }: PageProps) => {
       variables.sort();
       setVariables(variables);
     }
-  }, [selectedLanguages]);
+  }, [selectedLanguages, inputText]);
 
   // Get results
   useEffect(() => {
     let variable = selectedVariable || variables[0];
 
-    let results: Array<[string, string]> = [];
+    let results = [];
     if (variables.length === 0) {
       setResults(results);
     } else {
@@ -84,7 +83,7 @@ const IndexPage = ({ location }: PageProps) => {
     }
   }, [variables, selectedLanguages, selectedVariable]);
 
-  const onSelect = (value: string) => {
+  const onSelect = (value) => {
     if (value === "All") selectedLanguages.clear();
     else {
       if (selectedLanguages.has(value)) {
@@ -127,4 +126,4 @@ const IndexPage = ({ location }: PageProps) => {
   );
 };
 
-export default IndexPage;
+export default App;
