@@ -42,7 +42,7 @@ const Layout = ({ children }) => {
             </svg>
           </a>
           Built by
-          <a className="font-normal mx-1" href="https://www.xiang.dev/about">
+          <a className="font-normal mx-1" href="https://www.xiang.es/about">
             Xiang Chen
           </a>
           | Build 20764176 Patch 1.0.29315
