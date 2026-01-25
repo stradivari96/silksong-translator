@@ -90,6 +90,28 @@ const App = () => {
     }
   }, [variables, selectedLanguages, selectedVariable]);
 
+  // Update URL params
+  useEffect(() => {
+    if (isLoading) return;
+
+    const params = new URLSearchParams(window.location.search);
+    if (inputText) {
+      params.set("search", inputText);
+    } else {
+      params.delete("search");
+    }
+
+    if (selectedLanguages.size > 0) {
+      params.set("lang", Array.from(selectedLanguages).sort().join(","));
+    } else {
+      params.delete("lang");
+    }
+
+    const query = params.toString();
+    const newUrl = query ? `${window.location.pathname}?${query}` : window.location.pathname;
+    window.history.replaceState(null, "", newUrl);
+  }, [inputText, selectedLanguages, isLoading]);
+
   const onSelect = (value) => {
     setIsLoading(true);
     if (value === "All") selectedLanguages.clear();
