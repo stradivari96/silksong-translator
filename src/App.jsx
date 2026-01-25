@@ -49,19 +49,20 @@ const App = () => {
     setIsLoading(true);
     const delayDebounceFn = setTimeout(() => {
       const searchStr = normalize(inputText);
-      const foundVariables = [];
+      const foundVariablesSet = new Set();
       Object.entries(AllText).forEach(([lang, data]) => {
         Object.entries(data).forEach(([k, v]) => {
-          if (foundVariables.includes(k)) return;
+          if (foundVariablesSet.has(k)) return;
           if (!v) return;
           if (
             normalize(v).includes(searchStr) ||
             normalize(k).includes(searchStr)
           ) {
-            foundVariables.push(k);
+            foundVariablesSet.add(k);
           }
         });
       });
+      const foundVariables = Array.from(foundVariablesSet);
       foundVariables.sort();
       setVariables(foundVariables);
       setIsLoading(false);
@@ -120,8 +121,8 @@ const App = () => {
         selectedLanguages.delete(value);
       } else {
         selectedLanguages.add(value);
+        }
       }
-    }
     setSelectedLanguages(new Set(selectedLanguages));
   };
 

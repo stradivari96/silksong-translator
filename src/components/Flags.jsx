@@ -31,7 +31,7 @@ export const FlagSpan = ({ value }) => {
         return null;
     }
   }
-  return <span className={`flag-icon flag-icon-${flagSuffix}`} />;
+  return <span className={`fi fi-${flagSuffix}`} />;
 };
 
 const Flag = ({ value, onSelect, selectedLanguages }) => {
