@@ -1,8 +1,11 @@
-import React, { useState, useId } from "react";
+import { useState, useId } from "react";
 import { FlagSpan } from "./Flags";
 
 const normalize = (str) => {
-  return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+  return str
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase();
 };
 
 const getHighlightedText = (text, highlight) => {
@@ -49,13 +52,14 @@ const getHighlightedText = (text, highlight) => {
     // matched text
     const matchStart = mapping[matchIndex];
     const matchEndNorm = matchIndex + normHighlight.length;
-    const matchEnd = mapping[matchEndNorm] !== undefined ? mapping[matchEndNorm] : text.length;
+    const matchEnd =
+      mapping[matchEndNorm] !== undefined ? mapping[matchEndNorm] : text.length;
 
     if (matchEnd > matchStart) {
       parts.push(
         <span key={matchStart} className="bg-yellow-200 text-black">
           {text.slice(matchStart, matchEnd)}
-        </span>
+        </span>,
       );
     }
 
@@ -78,8 +82,8 @@ const getHighlightedText = (text, highlight) => {
 const ResultCard = ({ lang, text, index, searchQuery }) => {
   const [showAlert, setShowAlert] = useState(false);
   const uniqueId = useId();
-  
-  // Preserve the legacy ID for the first item if strictly needed by external CSS/JS, 
+
+  // Preserve the legacy ID for the first item if strictly needed by external CSS/JS,
   // otherwise fallback to a unique ID.
   const divId = index === 0 ? "fkrc-checkbox" : uniqueId;
 
@@ -99,7 +103,7 @@ const ResultCard = ({ lang, text, index, searchQuery }) => {
           className="focus:outline-none hover:bg-gray-400 hover:text-black text-gray-100 cursor-pointer px-2 rounded flex flex-row"
           onClick={handleCopy}
           onKeyDown={(e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
+            if (e.key === "Enter" || e.key === " ") {
               handleCopy();
             }
           }}

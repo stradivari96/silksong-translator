@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import queryString from "query-string";
+import { useState, useEffect } from "react";
 
 import Layout from "./components/Layout";
 import TextResults from "./components/TextResults";
@@ -9,25 +8,23 @@ import Form from "./components/Form";
 import AllText from "./all_text.json";
 
 const normalize = (str) => {
-  str = str.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
-  return str.toLowerCase()
-}
+  str = str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  return str.toLowerCase();
+};
 
 const App = () => {
   const [inputText, setInputText] = useState("");
   const [selectedVariable, setSelectedVariable] = useState("");
   const [variables, setVariables] = useState([]);
-  const [selectedLanguages, setSelectedLanguages] = useState(
-    new Set()
-  );
+  const [selectedLanguages, setSelectedLanguages] = useState(new Set());
   const [results, setResults] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  
+
   // URL param parsing
   useEffect(() => {
-    const params = queryString.parse(window.location.search);
-    const initialInput = params.search;
-    const lang = params.lang;
+    const params = new URLSearchParams(window.location.search);
+    const initialInput = params.get("search");
+    const lang = params.get("lang");
 
     const initialLangs = new Set();
     if (lang)
@@ -86,7 +83,7 @@ const App = () => {
           ([lang, data]) =>
             (selectedLanguages.size === 0 || selectedLanguages.has(lang)) &&
             data.hasOwnProperty(variable) &&
-            data[variable]
+            data[variable],
         )
         .map(([lang, data]) => [lang, data[variable]]);
       setResults(results);
@@ -143,7 +140,8 @@ const App = () => {
                     key={v}
                     onClick={() => setSelectedVariable(v)}
                     className={`px-4 py-2 text-sm font-medium rounded-t-lg transition-colors duration-200 whitespace-nowrap border-b-2 ${
-                      (selectedVariable === v || (!selectedVariable && variables[0] === v))
+                      selectedVariable === v ||
+                      (!selectedVariable && variables[0] === v)
                         ? "text-black border-gray-800 bg-gray-200"
                         : "text-gray-500 border-transparent hover:text-gray-700 hover:bg-gray-100"
                     }`}
@@ -155,7 +153,7 @@ const App = () => {
             </div>
           )}
         </div>
-        
+
         {isLoading ? (
           <div className="flex justify-center items-center py-10">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900"></div>

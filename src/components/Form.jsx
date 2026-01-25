@@ -1,5 +1,3 @@
-import React from "react";
-
 const Form = ({ inputText, setInputText, selectedLanguages }) => (
   <form className="mx-auto sm:w-4/5">
     <label

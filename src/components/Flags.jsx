@@ -1,17 +1,4 @@
-import React from "react";
-
-const langs = [
-  "DE",
-  "EN",
-  "ES",
-  "FR",
-  "IT",
-  "JA",
-  "KO",
-  "PT",
-  "RU",
-  "ZH",
-];
+const langs = ["DE", "EN", "ES", "FR", "IT", "JA", "KO", "PT", "RU", "ZH"];
 langs.sort();
 langs.unshift("All");
 
