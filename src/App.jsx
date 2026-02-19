@@ -15,10 +15,13 @@ const App = () => {
   const [selectedLanguages, setSelectedLanguages] = useState(new Set());
   const [results, setResults] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(
+    () => localStorage.getItem("darkMode") === "true"
+  );
 
   useEffect(() => {
     document.documentElement.classList.toggle("dark", darkMode);
+    localStorage.setItem("darkMode", darkMode);
   }, [darkMode]);
 
   // URL param parsing
