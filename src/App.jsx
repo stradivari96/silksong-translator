@@ -15,6 +15,11 @@ const App = () => {
   const [selectedLanguages, setSelectedLanguages] = useState(new Set());
   const [results, setResults] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", darkMode);
+  }, [darkMode]);
 
   // URL param parsing
   useEffect(() => {
@@ -123,7 +128,7 @@ const App = () => {
   };
 
   return (
-    <Layout>
+    <Layout darkMode={darkMode} toggleDarkMode={() => setDarkMode((d) => !d)}>
       <div>
         <Form
           inputText={inputText}
@@ -138,10 +143,10 @@ const App = () => {
         <div className="px-2">
           {variables.length > 0 && (
             <>
-              <p className="text-sm text-gray-500 mb-1">
+              <p className="text-sm text-gray-500 dark:text-gray-400 mb-1">
                 {variables.length} match{variables.length !== 1 ? "es" : ""}
               </p>
-              <div className="overflow-y-auto max-h-48 border border-gray-300 rounded-lg mb-4 bg-white shadow-sm">
+              <div className="overflow-y-auto max-h-48 border border-gray-300 dark:border-gray-600 rounded-lg mb-4 bg-white dark:bg-gray-800 shadow-sm">
                 {variables.map((v) => {
                   const isActive =
                     selectedVariable === v ||
@@ -152,8 +157,8 @@ const App = () => {
                       onClick={() => setSelectedVariable(v)}
                       className={`w-full text-left px-4 py-2 text-sm transition-colors duration-150 ${
                         isActive
-                          ? "bg-gray-200 text-black font-medium"
-                          : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
+                          ? "bg-gray-200 text-black font-medium dark:bg-gray-700 dark:text-white"
+                          : "text-gray-600 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-gray-100"
                       }`}
                     >
                       {v}
@@ -167,7 +172,7 @@ const App = () => {
 
         {isLoading ? (
           <div className="flex justify-center items-center py-10">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900"></div>
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900 dark:border-gray-100"></div>
           </div>
         ) : (
           <TextResults values={results} searchQuery={inputText} />
