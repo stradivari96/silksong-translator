@@ -4,55 +4,76 @@ import changelog from "../changelog.json";
 
 const LANGS = ["DE", "EN", "ES", "FR", "IT", "JA", "KO", "PT", "RU", "ZH"];
 
-const typeStyles = {
-  added: {
-    border: "border-green-500",
-    label: "text-green-600 dark:text-green-400",
-    newBg: "bg-green-50 dark:bg-green-900/20 text-green-900 dark:text-green-200",
-  },
-  removed: {
-    border: "border-red-500",
-    label: "text-red-600 dark:text-red-400",
-    oldBg: "bg-red-50 dark:bg-red-900/20 text-red-900 dark:text-red-200",
-  },
-  modified: {
-    border: "border-yellow-500",
-    label: "text-yellow-600 dark:text-yellow-400",
-    oldBg: "bg-red-50 dark:bg-red-900/20 text-red-900 dark:text-red-200",
-    newBg: "bg-green-50 dark:bg-green-900/20 text-green-900 dark:text-green-200",
-  },
+const lcsDiff = (oldLines, newLines) => {
+  const m = oldLines.length, n = newLines.length;
+  const dp = Array.from({ length: m + 1 }, () => new Array(n + 1).fill(0));
+  for (let i = 1; i <= m; i++)
+    for (let j = 1; j <= n; j++)
+      dp[i][j] = oldLines[i-1] === newLines[j-1]
+        ? dp[i-1][j-1] + 1
+        : Math.max(dp[i-1][j], dp[i][j-1]);
+
+  const result = [];
+  let i = m, j = n;
+  while (i > 0 || j > 0) {
+    if (i > 0 && j > 0 && oldLines[i-1] === newLines[j-1]) {
+      result.unshift({ type: "context", line: oldLines[i-1] });
+      i--; j--;
+    } else if (j > 0 && (i === 0 || dp[i][j-1] >= dp[i-1][j])) {
+      result.unshift({ type: "added", line: newLines[j-1] });
+      j--;
+    } else {
+      result.unshift({ type: "removed", line: oldLines[i-1] });
+      i--;
+    }
+  }
+  return result;
 };
 
-const ChangeEntry = ({ change, onKeyClick }) => {
-  const s = typeStyles[change.type];
+const ROW = {
+  context: { bg: "", prefix: " ", prefixCls: "text-gray-400 select-none", textCls: "text-gray-700 dark:text-gray-300" },
+  removed: { bg: "bg-red-50 dark:bg-red-950/40", prefix: "-", prefixCls: "text-red-500 dark:text-red-400 select-none", textCls: "text-red-900 dark:text-red-200" },
+  added:   { bg: "bg-green-50 dark:bg-green-950/40", prefix: "+", prefixCls: "text-green-600 dark:text-green-400 select-none", textCls: "text-green-900 dark:text-green-200" },
+};
+
+const DiffBlock = ({ oldText, newText }) => {
+  const rows = oldText && newText
+    ? lcsDiff(oldText.split("\n"), newText.split("\n"))
+    : (oldText ?? newText).split("\n").map((line) => ({
+        type: oldText ? "removed" : "added", line,
+      }));
+
   return (
-    <div className={`border-l-4 ${s.border} pl-3 mb-3`}>
-      <p className="text-xs font-mono mb-1 flex items-center gap-1.5 flex-wrap">
-        <FlagSpan value={change.lang} />
-        <span className="text-gray-500 dark:text-gray-400">{change.lang}</span>
-        <span className="text-gray-400">·</span>
-        <button
-          className="text-blue-600 dark:text-blue-400 hover:underline"
-          onClick={() => onKeyClick(change.key)}
-        >
-          {change.key}
-        </button>
-        <span className="text-gray-400">·</span>
-        <span className={s.label}>{change.type}</span>
-      </p>
-      {change.old && (
-        <p className={`text-sm px-2 py-1 rounded mb-1 whitespace-pre-wrap break-words ${s.oldBg}`}>
-          {change.old}
-        </p>
-      )}
-      {change.new && (
-        <p className={`text-sm px-2 py-1 rounded whitespace-pre-wrap break-words ${s.newBg}`}>
-          {change.new}
-        </p>
-      )}
-    </div>
+    <>
+      {rows.map(({ type, line }, i) => {
+        const r = ROW[type];
+        return (
+          <div key={i} className={`flex font-mono text-sm px-2 py-px ${r.bg}`}>
+            <span className={`mr-3 shrink-0 ${r.prefixCls}`}>{r.prefix}</span>
+            <span className={`whitespace-pre-wrap break-all ${r.textCls}`}>{line}</span>
+          </div>
+        );
+      })}
+    </>
   );
 };
+
+const ChangeEntry = ({ change, onKeyClick }) => (
+  <div className="mb-3 rounded overflow-hidden border border-gray-200 dark:border-gray-700 text-sm">
+    <div className="px-3 py-1 bg-gray-100 dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 flex items-center gap-1.5 flex-wrap">
+      <FlagSpan value={change.lang} />
+      <span className="font-mono text-xs text-gray-500 dark:text-gray-400">{change.lang}</span>
+      <span className="text-gray-400">·</span>
+      <button
+        className="font-mono text-xs text-blue-600 dark:text-blue-400 hover:underline"
+        onClick={() => onKeyClick(change.key)}
+      >
+        {change.key}
+      </button>
+    </div>
+    <DiffBlock oldText={change.old ?? null} newText={change.new ?? null} />
+  </div>
+);
 
 const PAGE_SIZE = 50;
 
