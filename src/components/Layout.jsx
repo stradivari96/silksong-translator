@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-const Layout = ({ children, darkMode, toggleDarkMode }) => {
+const Layout = ({ children, darkMode, toggleDarkMode, page, setPage }) => {
   const title = "Silksong translator";
   return (
     <div className="bg-gray-200 dark:bg-gray-900 dark:text-gray-100 h-full min-h-screen flex flex-col">
@@ -24,13 +24,21 @@ const Layout = ({ children, darkMode, toggleDarkMode }) => {
               {title}
             </a>
           </h1>
-          <button
-            onClick={toggleDarkMode}
-            className="text-xl leading-none p-1 rounded hover:opacity-70 transition-opacity"
-            aria-label="Toggle dark mode"
-          >
-            {darkMode ? "☀️" : "🌙"}
-          </button>
+          <div className="flex items-center gap-3">
+            <button
+              onClick={() => setPage(page === "changelog" ? "search" : "changelog")}
+              className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-100 transition-colors underline underline-offset-2"
+            >
+              {page === "changelog" ? "← Search" : "Changelog"}
+            </button>
+            <button
+              onClick={toggleDarkMode}
+              className="text-xl leading-none p-1 rounded hover:opacity-70 transition-opacity"
+              aria-label="Toggle dark mode"
+            >
+              {darkMode ? "☀️" : "🌙"}
+            </button>
+          </div>
         </div>
         {children}
       </div>
@@ -62,6 +70,8 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
   darkMode: PropTypes.bool.isRequired,
   toggleDarkMode: PropTypes.func.isRequired,
+  page: PropTypes.string.isRequired,
+  setPage: PropTypes.func.isRequired,
 };
 
 export default Layout;
