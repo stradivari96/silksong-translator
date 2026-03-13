@@ -1,5 +1,455 @@
 [
   {
+    "commit": "1023662",
+    "date": "2026-03-13",
+    "message": "Skip deprecated text",
+    "changes": [
+      {
+        "key": "BLUE_SCIENTIST_Q2_CANCOMPLETE",
+        "lang": "EN",
+        "type": "removed",
+        "old": "Assistant! How goes your latest task? Have you extracted a sufficient amount of mossblood for me?"
+      },
+      {
+        "key": "BLUE_SCIENTIST_Q2_REFUSE",
+        "lang": "EN",
+        "type": "removed",
+        "old": "Guarding a meagre substance with such jealousy... it does not reflect well on your intellect!"
+      },
+      {
+        "key": "BLUE_SCIENTIST_QUEST2_ACCEPT",
+        "lang": "EN",
+        "type": "removed",
+        "old": "Good! Good! Take again my Needle Phial. Find the moss creatures, any will do, ready the Phial and stick them through to extract their mossblood.\n\nThis is an easy task and you’ll find little challenge, so the compensation shall only be rosaries. But! Think of the true reward! Understanding! For wonderous Plasmium, every small step is worth taking."
+      },
+      {
+        "key": "BLUE_SCIENTIST_QUEST2_COMPLETE_1",
+        "lang": "EN",
+        "type": "removed",
+        "old": "Excellent! With the mossblood to aid my Plasmium research the speed of discoveries shall greatly increase.\n\nYou are proving a perfectly adequate assistant! Far better than the last lout, whatever his name was."
+      },
+      {
+        "key": "BLUE_SCIENTIST_QUEST2_COMPLETE_2",
+        "lang": "EN",
+        "type": "removed",
+        "old": "And of course, you shall have your recompense. I strung these rosaries together myself, with an exactness and symmetry that none other in this land can match!"
+      },
+      {
+        "key": "BLUE_SCIENTIST_QUEST2_DECLINE",
+        "lang": "EN",
+        "type": "removed",
+        "old": "These are crucial studies, assistant! Plasmium’s nature demands understanding.\n\nIf that doesn’t motivate you, then I worry your mind has dulled."
+      },
+      {
+        "key": "BLUE_SCIENTIST_QUEST2_OFFER",
+        "lang": "EN",
+        "type": "removed",
+        "old": "Assistant! If you plan on hanging around, maybe you’d care to take on a smaller task?\n\nIf my path allows, and the compensation is fair, I may consider it. What would you have me do?\n\nI seek the blood of the moss creatures, in the humid caves below here. Not to study them. They are unremarkable. It is for the further understanding of Plasmium! We shall unite the substances and see how the plasmium reacts."
+      },
+      {
+        "key": "BLUE_SCIENTIST_QUEST2_REOFFER",
+        "lang": "EN",
+        "type": "removed",
+        "old": "Assistant! If you’re wanting more rosaries to fill your pockets, then aid me with the collection of mossblood from the caves below."
+      },
+      {
+        "key": "BLUE_SCIENTIST_QUEST2_REPEAT",
+        "lang": "EN",
+        "type": "removed",
+        "old": "I’m eager for the mossblood, assistant. While research needs doing, one must never slack.\n\nIf time permits, sir, I shall acquire your samples for you."
+      },
+      {
+        "key": "BS_SIT_QUEST2_ACCEPT",
+        "lang": "EN",
+        "type": "modified",
+        "old": "Ahhh. Wonderful... Together, we can achieve it...\n\nThe Needle Phial... The mossblood from the humid caves at Pharloom’s base...\n\nWe need it... You need it... Bring the mossblood...",
+        "new": "Ahhhh. Yes... Assistant. So loyal... Take the Needle Phial... find the plasmified bugs below...\n\nCharge the Phial to full strength... Pierce them deep... Extract their Plasmified Blood.\n\nOnce we have it... we can peer deeper... learn more... enlighten ourselves fully..."
+      },
+      {
+        "key": "BS_SIT_QUEST2_COMPLETE",
+        "lang": "EN",
+        "type": "removed",
+        "old": "The mossblood... The Plasmium. It demands that foreign, lesser life... It demands violent coercion...\n\nYou have done so well, Assistant... For your kind efforts, you may relieve this shell of its rosaries. They are heavy, mortal things... On a transcending shell, they will only weigh..."
+      },
+      {
+        "key": "BS_SIT_QUEST2_DECLINE",
+        "lang": "EN",
+        "type": "modified",
+        "old": "No? Assistant... But you must. For your forever... you must.",
+        "new": "What fear arrests you...? This must be done... or we will never learn the deeper truth... Never become what is needed..."
+      },
+      {
+        "key": "BS_SIT_QUEST2_OFFER",
+        "lang": "EN",
+        "type": "modified",
+        "old": "Assistant... More may be done... For science, and for you... We shall force the Plasmium’s response...\n\nOur great understanding... I can see it there... closer. Would you aid again... Assistant?",
+        "new": "Assistant... to learn more of Plasmium’s wonders... I know what we must do... \n\nThe bugs below... who have imbibed the substance... and evolved... their bodies are full with Plasmified Blood...\n\nYou must use the Needle Phial and extract this precious nectar... only by scrutinising it... can we attain higher knowledge..."
+      },
+      {
+        "key": "BS_SIT_QUEST2_REOFFER",
+        "lang": "EN",
+        "type": "modified",
+        "old": "Our great understanding... I can see it there... closer. Would you aid again... Assistant?",
+        "new": "The bugs below who have imbibed the substance and evolved... their bodies are filled with Plasmified Blood...\n\nYou must use the Needle Phial and extract this precious nectar... only by scrutinising it... can we attain higher knowledge..."
+      },
+      {
+        "key": "BS_SIT_QUEST2_REPEAT",
+        "lang": "EN",
+        "type": "modified",
+        "old": "With the Needle Phial... The mossblood from the humid caves at Pharloom’s base...\n\nWe shall force the Plasmium to respond... We need it... You need it... Bring the mossblood...",
+        "new": "Ready the Needle Phial... find the plasmified bugs below...\n\nCharge the Phial to full strength... Pierce them deep... Extract the Plasmified Blood..."
+      },
+      {
+        "key": "BS_SIT_QUEST3_ACCEPT",
+        "lang": "EN",
+        "type": "removed",
+        "old": "Goooooood. That’s it Assistant... My dear Assistant.\n\nThe muckblood... From the swamps beside the sea. Vile, impure... necessary, for great discovery...To become that great discovery.\n\nThe Needle Phial. Use it. Extract the blood... Bring it. I must ingest that crudest liquid life..."
+      },
+      {
+        "key": "BS_SIT_QUEST3_COMPLETE",
+        "lang": "EN",
+        "type": "removed",
+        "old": "Dear Assistant. Loyal, wonderful... Zango... you have done it. Without you... never could we have, so much... transfigured.\n\nI need only consume this last... pure blood... To force the reaction. To become a source. For all... For you... May you be eternal...\n\nTake my gift, dear Zango. A symbol... of us... Now.... Always. Reach in, deep. Feel the new form that grows within my shell... It is yours. Yours forever..."
+      },
+      {
+        "key": "BS_SIT_QUEST3_DECLINE",
+        "lang": "EN",
+        "type": "removed",
+        "old": "No? Assistant... But you must. For your forever... you must."
+      },
+      {
+        "key": "BS_SIT_QUEST3_OFFER",
+        "lang": "EN",
+        "type": "removed",
+        "old": "Assistant? Would you still do it? For me? For us? Still... assist? The blood, we need more, further... to understand."
+      },
+      {
+        "key": "BS_SIT_QUEST3_REOFFER",
+        "lang": "EN",
+        "type": "removed",
+        "old": "Assistant? Would you still do it? For me? For us? Still... assist? The blood, we need more, further... to understand."
+      },
+      {
+        "key": "BS_SIT_QUEST3_REPEAT",
+        "lang": "EN",
+        "type": "removed",
+        "old": "The muckblood... Please, dear Assistant. Plasmium demands its final challenge.\n\nUse the Phial... Strike deep. Suck that foul liquid from the swamp things’ shells... For your forever..."
+      },
+      {
+        "key": "CARAVAN_SPIDER_BELLHART_ARRIVE",
+        "lang": "EN",
+        "type": "removed",
+        "old": "We’ve arrived, small spider. Bellhart waits just through that tunnel. From this distance at least it seems safe enough?\n\nPerhaps the rumours of its danger were overstated? If you’re needing travel here again, I’m inclined to offer a more reasonable rate.\n\nThank you for your service, sir. It may seem safe from here, but I shall keep my guard up nonetheless."
+      },
+      {
+        "key": "CARAVAN_SPIDER_BELLHART_CONFIRM_DLG",
+        "lang": "EN",
+        "type": "removed",
+        "old": "Spider, I can take you to Bellhart, but I warn you, the pilgrim’s speak of bad happenings around that place.\n\nThough I’ve not seen it for myself, I’m charging a premium to cover the risk."
+      },
+      {
+        "key": "CARAVAN_SPIDER_BELLHART_CONFIRM_PROMPT",
+        "lang": "EN",
+        "type": "removed",
+        "old": "Travel to Bellhart?"
+      },
+      {
+        "key": "CARAVAN_SPIDER_CANCEL",
+        "lang": "EN",
+        "type": "removed",
+        "old": "(canceled shop menu)"
+      },
+      {
+        "key": "CARAVAN_SPIDER_MEET",
+        "lang": "EN",
+        "type": "removed",
+        "old": "Many thanks for freeing me, small spider. It was a careless move, to blunder into those deadly threads.\n\nYou too look a spider, but these ropes suggest you use no silk in your service?\n\nHoi. No! Don’t mistake. I am arachni, sure, but no Weaver, and the better for it! If I could produce silk I’d be fast seized by the Citadel.\n\nTo weave... Quite a talent, and I’ll not deny some envy, but my weakness means my hide stays safe.\n\nIt’s no matter really. I’m a fair talent with my vineropes. Trade me a few rosaries and I’ll take you via routes only I’m able to scale."
+      },
+      {
+        "key": "CARAVAN_SPIDER_MEET_CORAL",
+        "lang": "EN",
+        "type": "removed",
+        "old": "Well well. I’ve not seen this old stop in many a beat. You have my thanks for clearing it.\n\nThe coral overgrowth has grown wild. The bug built structures about these climes are subsumed beneath it. \n\nI’d heard the coral was always a hard thing to keep under control, even back when the place was well travelled.\n\nNow there’s no one left to tend the path, it’s no surprise so few pilgrims find their way through."
+      },
+      {
+        "key": "CARAVAN_SPIDER_MEET_NO_BELLHART",
+        "lang": "EN",
+        "type": "removed",
+        "old": "Many thanks for freeing me, small spider. It was a careless move, to blundered into those deadly threads.\n\nYou too look a spider, but these ropes suggest you use no silk in your service?\n\nHoi. No! Don’t mistake. I am arachni, sure, but no Weaver, and the better for it! If I could produce silk I’d be fast seized by the Citadel.\n\nTo weave... Quite a talent, and I’ll not deny some envy, but my weakness means my hide stays safe.\n\nIt’s no matter really. I’m a fair talent with my vineropes. Trade me a few rosaries and I’ll take you via routes only I’m able to scale."
+      },
+      {
+        "key": "CARAVAN_SPIDER_PURCHASED",
+        "lang": "EN",
+        "type": "removed",
+        "old": "(purchased passage, “get in!” etc)"
+      },
+      {
+        "key": "CARAVAN_SPIDER_STRUNG_MEET",
+        "lang": "EN",
+        "type": "removed",
+        "old": "Gah! Traveller, please! This wretched thread has me snared tight. \n\nThere must be a thick knot up above. Cut me free!"
+      },
+      {
+        "key": "CARAVAN_SPIDER_STRUNG_REPEAT",
+        "lang": "EN",
+        "type": "removed",
+        "old": "Curses! Traveller! Help me, please!"
+      },
+      {
+        "key": "CARAVAN_SPIDER_TALK_THREAD",
+        "lang": "EN",
+        "type": "removed",
+        "old": "(No longer needed. Remove.)"
+      },
+      {
+        "key": "CARETAKER_MEET",
+        "lang": "EN",
+        "type": "removed",
+        "old": "Gah! Of course it had to be you bellringer! Wriggling your way up here, making all this racket!\n\nNow look at what you’ve done! Activated the old bells, the lot of’em and linked’em!\n\nThere they go, peeling out their sorrowful song, weakening our monarch, even as she wakes.\n\nYou’d still remain cowled before me, sir? Your family is known to me, and no ordinary bug would dare ascend to this cradle. Don’t you think it’s past time you dropped the act of helpless pilgrim?\n\nGah! Curse you, Old One! Permit a bug their small disguise will ya! It’s been a pleasant thing to play the fool! And I weren’t calling for change, even if you insist on bringing it!\n\nChange was unavoidable, whether I arrived or not. The monarch stirs. My prescence only accelerates the inevitable.\n\nSo what is it your hopin to achieve, missy? Planning to usurp, aye? Want to become the new queen above us all, to string us up in your own beastly web? Surely it’s the way of Weavers and gods both..."
+      },
+      {
+        "key": "LACE_MEET_GROTTO_1",
+        "lang": "EN",
+        "type": "removed",
+        "old": "How sad. A little spider has fallen from its cage. So lost. So weak. Poor little morsel."
+      },
+      {
+        "key": "LACE_MEET_GROTTO_2",
+        "lang": "EN",
+        "type": "removed",
+        "old": "I can save you little spider. All the trouble you’d face above. All the suffering. It’s so simple.\n\nI’ll just skewer you here and now, pluck that flickering life right out of you.\n\nYour threats are worthless. If you are my foe, stay your voice and raise your blade."
+      },
+      {
+        "key": "LACE_MEET_GROTTO_3",
+        "lang": "EN",
+        "type": "removed",
+        "old": "Delicious! I like you already!"
+      },
+      {
+        "key": "LACE_NEEDOLIN_1",
+        "lang": "EN",
+        "type": "removed",
+        "old": "Look at you, sleeping down there like you’ve only just hatched! Silly little spider.\n\nAnd think! I could have pinned you to the stone to rest forever beside the shells of your ancestors.\n\nYet you let me live while I lay defenceless. Your words feign more cruelty than your actions suggest.\n\nWhat is your role here, pale child? Do you abide the silk sickness that strikes this land? Do you aid it? Or would you fight against it?\n\n What dull questions, little spider! I care nothing for this lands wasting. Only curiosity brought me here, deep under the Kingdom, where the songs are but a whisper.\n\n To delight in your pathetic plight is enough! You are a rare treat, entertainment this decaying kingdom rarely grants."
+      },
+      {
+        "key": "LACE_NEEDOLIN_PLAYED",
+        "lang": "EN",
+        "type": "removed",
+        "old": "Oh spider dear! The way you pluck and pound at that crude instrument! What tragedy!\n\n(etc.)"
+      },
+      {
+        "key": "LACE_NEEDOLIN_R",
+        "lang": "EN",
+        "type": "removed",
+        "old": "(final lace line)"
+      },
+      {
+        "key": "LACE_REMEET_GROTTO_1",
+        "lang": "EN",
+        "type": "removed",
+        "old": "How sad. A little spider has fallen from its cage. So lost, so weak. Poor little morsel."
+      },
+      {
+        "key": "LACE_REMEET_GROTTO_2",
+        "lang": "EN",
+        "type": "removed",
+        "old": "I can save you little spider. All the trouble you’d face above. All the suffering. Its so simple.\n\nI’ll just skewer you here and now, pluck that flickering life right out of you.\n\nYour threats are worthless. If you are my foe, stay your voice and raise your blade!"
+      },
+      {
+        "key": "LACE_REMEET_GROTTO_3",
+        "lang": "EN",
+        "type": "removed",
+        "old": "Delicious! I like you already!"
+      },
+      {
+        "key": "PILGRIM_STOMPER_QUEST_ACCEPT",
+        "lang": "EN",
+        "type": "removed",
+        "old": "Ahh! At last, one as curious as myself! Hurry then! Hunt down lost, wandering pilgrims and wrench the organs from within their shells!\n\nTogether, we will come to understand. We will learn what haunts the pilgrims..."
+      },
+      {
+        "key": "PILGRIM_STOMPER_QUEST_ACCEPTED_WISHWALL",
+        "lang": "EN",
+        "type": "removed",
+        "old": "I saw your request upon Bone Bottom’s wishwall, sir, and have accepted. This is an unusual task... but I am well able to assist."
+      },
+      {
+        "key": "PILGRIM_STOMPER_QUEST_ACCEPTED_WISHWALL_ACT3",
+        "lang": "EN",
+        "type": "removed",
+        "old": "I remember now, sir. You left your request upon Bone Bottom’s wishwall, and I accepted it. The nature of this Haunting has changed since then, but I can aid you still."
+      },
+      {
+        "key": "PILGRIM_STOMPER_QUEST_ACCEPT_ACT3",
+        "lang": "EN",
+        "type": "removed",
+        "old": "You assent, then... hurry and begin the task. Hunt down lost, wandering pilgrims and take the organs from within their shells.\n\nTogether, we will come to understand. We will learn what haunts the pilgrims..."
+      },
+      {
+        "key": "PILGRIM_STOMPER_QUEST_CONVO_1",
+        "lang": "EN",
+        "type": "removed",
+        "old": "You will find haunted pilgrims wandering the roads of the Marrow and beyond. It seems that even this affliction can not turn these wretches from their pilgrimage.\n\nStrike them down wherever you see them and pull the organs from their fallen bodies.\n\nAnd fret not for their suffering! If their mind still remains trapped within their shells, you are surely granting a mercy."
+      },
+      {
+        "key": "PILGRIM_STOMPER_QUEST_CONVO_2",
+        "lang": "EN",
+        "type": "removed",
+        "old": "This affliction that plagues the creatures of this land, the haunting as you call it... what do you know of its nature?\n\nAn unholy sickness, it grips both the living and the dead. Victims lose their senses, attacking any unhaunted creatures they encounter. An ignoble end!\n\nI see. And what do you believe is the cause?\n\nThe cause... I feel as though I have almost discerned it. The answer is close, tugging at me as I peer into these lifeless shells..."
+      },
+      {
+        "key": "PILGRIM_STOMPER_QUEST_CONVO_3",
+        "lang": "EN",
+        "type": "removed",
+        "old": "The organs. Bring them to me! I must understand this haunting! I must!"
+      },
+      {
+        "key": "PILGRIM_STOMPER_QUEST_DECLINE",
+        "lang": "EN",
+        "type": "removed",
+        "old": "You refuse me as well then, like all the others? You do these wretches no favour by allowing them to wander mindlessly!"
+      },
+      {
+        "key": "PILGRIM_STOMPER_QUEST_DECLINE_ACT3",
+        "lang": "EN",
+        "type": "removed",
+        "old": "You refuse me? The task is unseemly, but you do these poor pilgrims no favour by allowing them to wander mindlessly. You must reconsider!"
+      },
+      {
+        "key": "PILGRIM_STOMPER_QUEST_FINAL",
+        "lang": "EN",
+        "type": "removed",
+        "old": "Sir, I have delivered what you desired. How fare you?\n\nTh... the haunting... I know now. It’s in the thread... I understand... I un-der-stand!\n\nAhhh-aahhhhhhhhhh!"
+      },
+      {
+        "key": "PILGRIM_STOMPER_QUEST_FINAL_ACT3",
+        "lang": "EN",
+        "type": "removed",
+        "old": "Sir, I have delivered what you desired. How fare you?\n\nTh... the haunting... I know now. The black thread... the darkness! There is... nothing!\n\nAhhh-aahhhhhhhhhh!"
+      },
+      {
+        "key": "PILGRIM_STOMPER_QUEST_FINAL_DECLINE",
+        "lang": "EN",
+        "type": "removed",
+        "old": "Ohh-hhh.... organs... for me..."
+      },
+      {
+        "key": "PILGRIM_STOMPER_QUEST_MEET_1",
+        "lang": "EN",
+        "type": "removed",
+        "old": "You there! Just embarking on your pilgrimage? Tell me, have you been feeling strange? Have you been wandering aimlessly? Does murderous intent suddenly flare up inside you?\n\nI am no pilgrim sir, but I’ve seen the affliction upon those who wander these roads. Are you investigating the cause?"
+      },
+      {
+        "key": "PILGRIM_STOMPER_QUEST_MEET_1_ACT3",
+        "lang": "EN",
+        "type": "removed",
+        "old": "Ahh! You... you still have your wits about you! So I am not the only pilgrim left who has resisted the Haunting...\n\nI am no pilgrim sir, but I am well aware of the affliction that haunts these lands.\n\nThe black thread creeps through these caverns. Lingering here will mean your death."
+      },
+      {
+        "key": "PILGRIM_STOMPER_QUEST_MEET_2",
+        "lang": "EN",
+        "type": "removed",
+        "old": "Hm. Something is haunting the steps of we pilgrims. Tugging at the fringes of our minds, pulling us deep into madness. Leaving nothing but a babbling, grovelling shell.\n\nI have halted my own pilgrimage until I can understand this affliction. I won’t allow myself to be overcome, to have my sacred journey end in such a pathetic fashion!"
+      },
+      {
+        "key": "PILGRIM_STOMPER_QUEST_MEET_2_ACT3",
+        "lang": "EN",
+        "type": "removed",
+        "old": "Death... or something worse, perhaps?\n\nIt matters not. I have sworn a holy oath, to halt my pilgrimage here until I can understand this affliction. And perhaps through understanding... resist it."
+      },
+      {
+        "key": "PILGRIM_STOMPER_QUEST_OFFER",
+        "lang": "EN",
+        "type": "removed",
+        "old": "You, who are not a pilgrim. Though your path is not holy, you can still aid me!\n\nI wish to understand what haunts these pilgrims, and to do that I must peer into their bodies. Their organs hold the secret of their terrible affliction! You must harvest them for me!"
+      },
+      {
+        "key": "PILGRIM_STOMPER_QUEST_OFFER_ACT3",
+        "lang": "EN",
+        "type": "removed",
+        "old": "You are not a sister pilgrim, but your defiance of the black thread’s thrall marks you as holy, surely?\n\nTo understand what haunts the pilgrims I must peer into their bodies. Their organs hold the secret of their terrible affliction. Please... you must harvest them for me!"
+      },
+      {
+        "key": "PILGRIM_STOMPER_QUEST_READY",
+        "lang": "EN",
+        "type": "removed",
+        "old": "Ahh.... ahhh... the organs?"
+      },
+      {
+        "key": "PILGRIM_STOMPER_QUEST_REMEET_ACT3_1",
+        "lang": "EN",
+        "type": "removed",
+        "old": "Ahh! You still have your wits about you! So I am not the only pilgrim left who has resisted the haunting.\n\nBut wait... have we not met? Yes, a traveller garbed in red, who is not a pilgrim. How strange that you have returned here, after all this time.\n\nI travel these lands in search of a means to cleanse them of the black thread. You were once investigating the cause of the haunting, sir... what have you learnt?"
+      },
+      {
+        "key": "PILGRIM_STOMPER_QUEST_REMEET_ACT3_2",
+        "lang": "EN",
+        "type": "removed",
+        "old": "I... I am close to understanding. Yes, achingly close! I can feel the answers to all of my questions slowly slithering out of the darkness.\n\nMy work continues... I will not leave this place until I understand. I must know what haunts the pilgrims..."
+      },
+      {
+        "key": "PILGRIM_STOMPER_QUEST_REOFFER",
+        "lang": "EN",
+        "type": "removed",
+        "old": "I wish to understand what haunts these pilgrims, and to do that I must peer into their bodies. Their organs hold the secret of their terrible affliction! You must harvest them for me!"
+      },
+      {
+        "key": "PILGRIM_STOMPER_QUEST_REOFFER_ACT3",
+        "lang": "EN",
+        "type": "removed",
+        "old": "To understand what haunts the pilgrims I must peer into their bodies. Their organs hold the secret of their terrible affliction. Please... you must harvest them for me!"
+      },
+      {
+        "key": "QUEST_CORAL_INV_DESC",
+        "lang": "EN",
+        "type": "removed",
+        "old": "Hunt coral-shelled creatures and collect Coral Crust from their bodies."
+      },
+      {
+        "key": "QUEST_CORAL_INV_DESC_READY",
+        "lang": "EN",
+        "type": "removed",
+        "old": "Turn in the Coral Crust to the Bellhart wishwall and collect the reward."
+      },
+      {
+        "key": "QUEST_CORAL_LOC",
+        "lang": "EN",
+        "type": "removed",
+        "old": "Residents of Bellhart"
+      },
+      {
+        "key": "QUEST_CORAL_TITLE",
+        "lang": "EN",
+        "type": "removed",
+        "old": "Coral Curative"
+      },
+      {
+        "key": "QUEST_CORAL_WALL_DESC",
+        "lang": "EN",
+        "type": "removed",
+        "old": "Our medicines are in short supply and pilgrims often arrive here injured. We can prepare a soothing salve from the ground shells of coral creatures, if we only had some..."
+      },
+      {
+        "key": "TUNING_FORK_INSPECT",
+        "lang": "EN",
+        "type": "removed",
+        "old": "A Weaver tuning mechanism."
+      },
+      {
+        "key": "TUNING_FORK_PROMPT",
+        "lang": "EN",
+        "type": "removed",
+        "old": "Activate the device?"
+      },
+      {
+        "key": "WEAVER_ABILITY_INTRO",
+        "lang": "EN",
+        "type": "removed",
+        "old": "Ancestor... What strength remains in your shell, I have need of it.\n\nMay your Silk be bound to my own. And may those who seek to see me chained feel your power full."
+      }
+    ]
+  },
+  {
     "commit": "f7ea2e5",
     "date": "2025-12-04",
     "message": "add patch",
