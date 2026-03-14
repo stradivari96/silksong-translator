@@ -32,6 +32,9 @@ const App = () => {
     const params = new URLSearchParams(window.location.search);
     const initialInput = params.get("search");
     const lang = params.get("lang");
+    const initialPage = params.get("page") || "search";
+
+    setPage(initialPage);
 
     const initialLangs = new Set();
     if (lang)
@@ -115,10 +118,16 @@ const App = () => {
       params.delete("lang");
     }
 
+    if (page !== "search") {
+      params.set("page", page);
+    } else {
+      params.delete("page");
+    }
+
     const query = params.toString();
     const newUrl = query ? `${window.location.pathname}?${query}` : window.location.pathname;
     window.history.replaceState(null, "", newUrl);
-  }, [inputText, selectedLanguages, isLoading]);
+  }, [inputText, selectedLanguages, isLoading, page]);
 
   const onSelect = (value) => {
     if (value === "All") {
@@ -137,6 +146,7 @@ const App = () => {
     setPage("search");
     setInputText(key);
     setSelectedVariable(key);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
@@ -192,7 +202,12 @@ const App = () => {
               <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900 dark:border-gray-100"></div>
             </div>
           ) : (
-            <TextResults values={results} searchQuery={inputText} />
+            <TextResults
+              values={results}
+              searchQuery={inputText}
+              variableName={selectedVariable || variables[0]}
+              allTranslations={AllText}
+            />
           )}
         </div>
       )}
