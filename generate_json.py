@@ -17,12 +17,15 @@ if __name__ == "__main__":
         "KO",
         "PT",
         "RU",
+        "ZH_TW",
         "ZH",
     ]
 
     result = {l: {} for l in langs}
     for file in xml_folder.iterdir():
-        lang = file.name[:2]
+        lang = file.name[:5]
+        if lang != "ZH_TW":
+            lang = file.name[:2]
         if lang not in langs or file.name.endswith("_Deprecated.txt") :
             print(f"Skipping {file.name}")
             continue

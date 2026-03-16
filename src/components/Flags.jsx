@@ -1,4 +1,4 @@
-const langs = ["DE", "EN", "ES", "FR", "IT", "JA", "KO", "PT", "RU", "ZH"];
+const langs = ["DE", "EN", "ES", "FR", "IT", "JA", "KO", "PT", "RU", "ZH", "ZH_TW"];
 langs.sort();
 langs.unshift("All");
 
@@ -27,6 +27,9 @@ export const FlagSpan = ({ value }) => {
       case "ZH":
         flagSuffix = "cn";
         break;
+      case "ZH_TW":
+        flagSuffix = "tw";
+        break;
       default:
         return null;
     }
@@ -49,7 +52,7 @@ const Flag = ({ value, onSelect, selectedLanguages }) => {
       }}
     >
       <FlagSpan value={value} />
-      <p className="select-none">{value}</p>
+      <p className="select-none">{value == "ZH_TW" ? "TW" : value}</p>
     </div>
   );
 };

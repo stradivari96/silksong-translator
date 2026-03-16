@@ -65,7 +65,7 @@ const Layout = ({ children, darkMode, toggleDarkMode, page, setPage }) => {
           <a className="font-normal mx-1" href="https://www.xiang.es/about">
             Xiang Chen
           </a>
-          | Patch 1.0.29315
+          | Patch 1.0.29909
         </p>
       </footer>
     </div>
