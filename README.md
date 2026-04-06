@@ -24,6 +24,7 @@ Export all `TextAsset` using https://github.com/aelurum/AssetStudio. And run the
 
 ```
 python generate_json.py
+python generate_changelog.py
 ```
 
 Check build info at https://steamdb.info/app/1030300/patchnotes/

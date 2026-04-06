@@ -1,5 +1,201 @@
 [
   {
+    "commit": "2750f96",
+    "date": "2026-04-07",
+    "message": "Patch Patch 1.0.30000",
+    "changes": [
+      {
+        "key": "TROPHIES_BASE_SET_TITLE",
+        "lang": "DE",
+        "type": "modified",
+        "old": "Hollow Knight: Silksong-Trophäen",
+        "new": "Hollow Knight: Silksong"
+      },
+      {
+        "key": "HUNTRESS_MEET",
+        "lang": "EN",
+        "type": "modified",
+        "old": "Ssssppiidderr... Your ssstench is strange... yet similar. Your tension isss smelt strong. Do I ssseem a threat to you?\n\nThis whole land keeps me cautious, tall one, and your claws look to have seen much sharp use.\n\nYesss... I kill, gladly, but only to feed my ssshhhell, and my brood to come.\n\nYour meat... much ssssustanence it could grant... but too hard to pry... Your long, false claw would ssslash back ssswift.\n\nGood, so you can sense my skill, as I yours. A truce then, that we both shall live beyond our meeting.",
+        "new": "Ssssppiidderr... Your ssstench is strange... yet similar. Your tension isss smelt strong. Do I ssseem a threat to you?\n\nThis whole land keeps me cautious, tall one, and your claws look to have seen much sharp use.\n\nYesss... I kill, gladly, but only to feed my ssshhhell, and my brood to come.\n\nYour meat... much ssssustenance it could grant... but too hard to pry... Your long, false claw would ssslash back ssswift.\n\nGood, so you can sense my skill, as I yours. A truce then, that we both shall live beyond our meeting."
+      },
+      {
+        "key": "TROPHIES_BASE_SET_TITLE",
+        "lang": "EN",
+        "type": "modified",
+        "old": "Hollow Knight: Silksong Trophies",
+        "new": "Hollow Knight: Silksong"
+      },
+      {
+        "key": "TROPHIES_BASE_SET_TITLE",
+        "lang": "ES",
+        "type": "modified",
+        "old": "Trofeos de Hollow Knight: Silksong",
+        "new": "Hollow Knight: Silksong"
+      },
+      {
+        "key": "TROPHIES_BASE_SET_TITLE",
+        "lang": "FR",
+        "type": "modified",
+        "old": "Trophées d’Hollow Knight: Silksong",
+        "new": "Hollow Knight: Silksong"
+      },
+      {
+        "key": "TROPHIES_BASE_SET_TITLE",
+        "lang": "IT",
+        "type": "modified",
+        "old": "Trofei di Hollow Knight: Silksong",
+        "new": "Hollow Knight: Silksong"
+      },
+      {
+        "key": "TROPHIES_BASE_SET_TEXT",
+        "lang": "JA",
+        "type": "modified",
+        "old": "ホロウナイト: シルクソングのトロフィーです。",
+        "new": "Hollow Knight: Silksong のトロフィーです。"
+      },
+      {
+        "key": "TROPHIES_BASE_SET_TITLE",
+        "lang": "JA",
+        "type": "modified",
+        "old": "ホロウナイト: シルクソングのトロフィー",
+        "new": "Hollow Knight: Silksong"
+      },
+      {
+        "key": "TROPHIES_BASE_SET_TITLE",
+        "lang": "KO",
+        "type": "modified",
+        "old": "할로우 나이트: 실크송 트로피",
+        "new": "할로우 나이트: 실크송"
+      },
+      {
+        "key": "TROPHIES_BASE_SET_TITLE",
+        "lang": "PT",
+        "type": "modified",
+        "old": "Troféus de Hollow Knight: Silksong",
+        "new": "Hollow Knight: Silksong"
+      },
+      {
+        "key": "TROPHIES_BASE_SET_TITLE",
+        "lang": "RU",
+        "type": "modified",
+        "old": "Призы Hollow Knight: Песнь Шёлка",
+        "new": "Hollow Knight: Песнь Шёлка"
+      },
+      {
+        "key": "TROPHIES_BASE_SET_TITLE",
+        "lang": "ZH",
+        "type": "modified",
+        "old": "《空洞骑士：丝之歌》奖杯",
+        "new": "《空洞骑士：丝之歌》"
+      },
+      {
+        "key": "ARCHITECT_MEET",
+        "lang": "ZH_TW",
+        "type": "modified",
+        "old": "大師，這座聖堡裡似乎只剩您這麼一位製造者了。您對我沒有敵意，對嗎？這裡的其他構造體對我都非常不友善。\n\n紅衣蟲？我是制、制、造者。沒錯。仇敵。不是。我是建築師，僅僅是一名建築師。建造與自動運轉並非選擇，而是我們的本性、指令、牢、牢、牢籠。\n\n編織者血脈，沒錯，初代子嗣。稀有，早已消、消、逝？似是而非。\n\n您沒有看錯，我是編織者的後裔，同時也承載著另一支同樣奇特的血脈。\n\n那依你要、要、求，遵循指令之召喚，為了紡絡的初代子嗣，以、以、以及我們的永恆王國，我將為您效勞。我將為您鍛、鍛、鍛造。",
+        "new": "大師，這座聖堡裡似乎只剩您這麼一位製造者了。您對我沒有敵意，對嗎？這裡的其他構造體對我都非常不友善。\n\n紅衣蟲？我是製、製、造者。沒錯。仇敵。不是。我是建築師，僅僅是一名建築師。建造與自動運轉並非選擇，而是我們的本性、指令、牢、牢、牢籠。\n\n編織者血脈，沒錯，初代子嗣。稀有，早已消、消、逝？似是而非。\n\n您沒有看錯，我是編織者的後裔，同時也承載著另一支同樣奇特的血脈。\n\n那依你要、要、求，遵循指令之召喚，為了紡絡的初代子嗣，以、以、以及我們的永恆王國，我將為您效勞。我將為您鍛、鍛、鍛造。"
+      },
+      {
+        "key": "CORAL_STEPS_MAIN",
+        "lang": "ZH_TW",
+        "type": "modified",
+        "old": "蝕階",
+        "new": "風蝕長階"
+      },
+      {
+        "key": "COURIER_SHORT_THANK_PT1",
+        "lang": "ZH_TW",
+        "type": "modified",
+        "old": "哇！那些醜、醜八怪全被幹掉了！非常非常感謝您，勇士！\n\n舉手之勞。你是送貨員蒂普？\n\n鐘心鎮的店長芙蕾很擔心你……還有你帶的貨。\n\n她找的你？嘁！讓她學、學著耐心些！我才剛走！不過……您救了我，我真、真是幸運。",
+        "new": "哇！那些醜、醜八怪全被幹掉了！非常非常感謝您，勇士！\n\n舉手之勞。你是送貨員蒂普？\n\n鐘心鎮的店長芙蕾很擔心你……還有你帶的貨。\n\n是她讓你來的？嘁！讓她學、學著耐心些！我才剛走！不過……您救了我，我真、真是幸運。"
+      },
+      {
+        "key": "GARMOND_BLACK_THREADED_WALL",
+        "lang": "ZH_TW",
+        "type": "modified",
+        "old": "一隻心急如焚的蟲子在蝕階頂部的鐘道附近呼救。就沒誰能援助這隻可憐蟲嗎？",
+        "new": "一隻心急如焚的蟲子在風蝕長階頂部的鐘道附近呼救。就沒誰能援助這隻可憐蟲嗎？"
+      },
+      {
+        "key": "GARMOND_MEET",
+        "lang": "ZH_TW",
+        "type": "modified",
+        "old": "嘎嚕！歹徒！惡鬼！是誰這麼大膽，竟敢吵醒急需小睡片刻的勇士加蒙德？\n\n我無意驚擾您，先生，我只是路過塔樓而已，順便查探一下地勢。\n\n哼！查探地勢？這倒是戰士才有的派頭！看看你！你這站姿和手持針刃的架勢，單憑這些，就已經是在下戰書了。\n\n作為最英勇的騎士，若有蟲正面發起挑戰，為了榮耀，高尚的加蒙德定會欣然應戰！\n\n好在，你似乎並無此意。實不相瞞，我剛打過一場惡仗，正打算睡一覺解解乏。要是咱們真來一場騎士間的決鬥，你恐怕就沒福氣見識我全盛的風采了。",
+        "new": "嘎嚕！歹徒！惡鬼！是誰這麼大膽，竟敢吵醒亟需小睡片刻的勇士加蒙德？\n\n我無意驚擾您，先生，我只是路過塔樓而已，順便查探一下地勢。\n\n哼！查探地勢？這倒是戰士才有的派頭！看看你！你這站姿和手持針刃的架勢，單憑這些，就已經是在下戰書了。\n\n作為最英勇的騎士，若有蟲正面發起挑戰，為了榮耀，高尚的加蒙德定會欣然應戰！\n\n好在，你似乎並無此意。實不相瞞，我剛打過一場惡仗，正打算睡一覺解解乏。要是咱們真來一場騎士間的決鬥，你恐怕就沒福氣見識我全盛的風采了。"
+      },
+      {
+        "key": "GILLY_MEET_HIDDEN",
+        "lang": "ZH_TW",
+        "type": "modified",
+        "old": "天啊！這也太丟臉了！我這麼完美的偽裝都被識破了！你怎麼看出來的？出什麼錯了？一定是有什麼地方露餡了！\n\n你沒露出破綻，小傢伙。你的偽裝近乎完美，我不過是活得久了些，眼神也比較好。\n\n好吧！那我希望周圍的怪物別這麼眼尖。萬一被他們發現，或者直接被吃了，那我的任務可就全完了！",
+        "new": "天啊！這也太丟臉了！我這麼完美的偽裝都被識破了！你怎麼看出來的？出什麼錯了？一定是有什麼地方露餡了！\n\n你沒露出破綻，小傢伙。你的偽裝近乎完美，我不過是活得久了些，眼神也比較利。\n\n好吧！那我希望周圍的怪物別這麼眼尖。萬一被他們發現，或者直接被吃了，那我的任務可就全完了！"
+      },
+      {
+        "key": "GREETER_REPEAT",
+        "lang": "ZH_TW",
+        "type": "modified",
+        "old": "歡迎歡迎，諸位旅行者！請在此盡情舒展甲殼，養好有精神！\n\n這就是鐘心鎮，輝煌、璀璨，更重要的是萬分安全！在踏上最後的攀登之旅前，不妨多留一會！",
+        "new": "歡迎歡迎，諸位旅行者！請在此盡情舒展甲殼，養好精神！\n\n這就是鐘心鎮，輝煌、璀璨，更重要的是萬分安全！在踏上最後的攀登之旅前，不妨多留一會！"
+      },
+      {
+        "key": "GRINDLE_CITADEL_SLAP_1",
+        "lang": "ZH_TW",
+        "type": "modified",
+        "old": "喲，你在這破舊地方鬼鬼祟祟閒逛好久了吧？你身上肯定撈到不少好貨！讓咱這可憐的老竊賊蟲看一眼唄！",
+        "new": "喲，你在這破舊地方鬼鬼祟祟閒逛好久了吧？你身上肯定撈到不少好貨！讓咱這可憐的老竊賊蟲看一眼吧！"
+      },
+      {
+        "key": "MAPPER_GENERIC_JUDGESTEPS",
+        "lang": "ZH_TW",
+        "type": "modified",
+        "old": "啵尚喀！執針的小姑娘，你在附近看到過我導師的蹤跡嗎？我感覺她就在不久前來過這裡！\n\n 我不能確定，沙克拉，不過如果她是在尋找高手過招，這些蝕階的守衛戰士非常難纏，正好適合。\n\n沒錯！這些守衛確實很強，他們死守著崗位，冷酷殘暴地揮舞著武器，絕對不容小覷。",
+        "new": "啵尚喀！執針的小姑娘，你在附近看到過我導師的蹤跡嗎？我感覺她就在不久前來過這裡！\n\n 我不能確定，沙克拉，不過如果她是在尋找高手過招，這些風蝕長階的守衛戰士非常難纏，正好適合。\n\n沒錯！這些守衛確實很強，他們死守著崗位，冷酷殘暴地揮舞著武器，絕對不容小覷。"
+      },
+      {
+        "key": "MAPPER_ITEM_MAP_CORALCAVERNS_DESC",
+        "lang": "ZH_TW",
+        "type": "modified",
+        "old": "蝕階上被硬殼覆蓋的高地。種種跡象表明曾有強大的戰士統治過這片蜿蜒之地，只是沙塵已將他們的大部分痕跡掩埋。",
+        "new": "風蝕長階上被硬殼覆蓋的高地。種種跡象表明曾有強大的戰士統治過這片蜿蜒之地，只是沙塵已將他們的大部分痕跡掩埋。"
+      },
+      {
+        "key": "QUEST_SAVE_SHERMA_NAME",
+        "lang": "ZH_TW",
+        "type": "modified",
+        "old": "愈傷良方",
+        "new": "癒傷良方"
+      },
+      {
+        "key": "QUEST_SONGCLAVE_DONATE_1_DESC_WALL",
+        "lang": "ZH_TW",
+        "type": "modified",
+        "old": "既然這裡需要收容這麼多窮酸的流浪蟲子，沒有物資和錢可不行。看見了吧？那就自覺點，把自己的口袋掏乾淨！",
+        "new": "既然這裡需要收容這麼多窮酸的流浪蟲子，沒有物資和錢可不行。看見了吧？那就有點自覺，把自己的口袋掏乾淨！"
+      },
+      {
+        "key": "RELIC_DEALER_POSTWINDOW_FIRST",
+        "lang": "ZH_TW",
+        "type": "modified",
+        "old": "再來！給我帶更多過去的文物來！文獻、印章、神像！讓我們把這世界的歷史都搜刮過來，統統藏在這裡，安安穩穩！\n\n如果我又找到了這座王國過去的奇物，自再來的。在那之前，請多多保重。",
+        "new": "再來！給我帶更多過去的文物來！文獻、印章、神像！讓我們把這世界的歷史都搜刮過來，統統藏在這裡，安安穩穩！\n\n如果我又找到了這座王國過去的奇物，自會再來的。在那之前，請多多保重。"
+      },
+      {
+        "key": "SHERMA_RESCUE_END2",
+        "lang": "ZH_TW",
+        "type": "modified",
+        "old": "你能平安回到聚落嗎，小傢伙？若有需要，我可以送你一程。\n\n噢，不必了，我不想再給你添麻煩了，紅衣姑娘，路通了我就能自己走。\n\n就當再朝聖一回唄！哈哈！\n\n噢！我還有個東西想送你。摸黑從那堆破碎文物底下翻出來的，散發著蒼白的亮光。\n\n雖然看著有點怪……瞧著也不怎麼神聖……但你願意收下的話，我會很榮幸的！",
+        "new": "你能平安回到聚落嗎，小傢伙？若有需要，我可以送你一程。\n\n噢，不必了，我不想再給你添麻煩了，紅衣姑娘，路通了我就能自己走。\n\n就當再朝聖一回！哈哈！\n\n噢！我還有個東西想送你。摸黑從那堆破碎文物底下翻出來的，散發著蒼白的亮光。\n\n雖然看著有點怪……瞧著也不怎麼神聖……但你願意收下的話，我會很榮幸的！"
+      },
+      {
+        "key": "TROPHIES_BASE_SET_TITLE",
+        "lang": "ZH_TW",
+        "type": "modified",
+        "old": "《空洞騎士：絲之歌》獎盃",
+        "new": "《空洞騎士：絲之歌》"
+      }
+    ]
+  },
+  {
     "commit": "f3a8f26",
     "date": "2026-03-16",
     "message": "Patch 1.0.29909",
